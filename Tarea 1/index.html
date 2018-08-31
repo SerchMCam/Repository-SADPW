@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src= "NexusUI.js"></script>
+    <script src= "p5/p5.js"></script>
+    <script src= "p5/addons/p5.sound.js"></script>
+    <script src= "p5/addons/p5.dom.js"></script>
+    <script src= "js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>QWERTY keyboard</h1>
+    <h2>Each key of the keyboard has a specific sound</h2>
+    <h3>1st slider: Attack of the envelope</h3>
+    <h3>2nd slider: Release of the envelope</h3>
+    <h3>3rd slider: Amplitude of the sound</h3>
+    <h3>In the black square an ellipse will appear an ellipse with the sound</h3>
+    <img src="qwerty_keyboard.png" width="510px" height="160px">
+    <div id="pian"></div>
+    <script>
+
+
+    var piano = new Nexus.Piano("#pian", {
+        "size": [500,125],
+        "mode": "button",
+        "lowNote":24,
+        "highNote":60
+    })
+    
+    piano.on("change", function(v){
+        console.log(v);
+    });
+
+    </script>
+
+</body>
+</html>
